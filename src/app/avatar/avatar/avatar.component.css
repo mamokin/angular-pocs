@@ -1,0 +1,31 @@
+.avatar {
+  border: solid 2px white;
+  border-radius: 50%;
+  background-color: blanchedalmond;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+
+  position: relative;
+}
+
+.avatar__initials {
+  text-align: center;
+  width: 4rem;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+.avatar__badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px white;
+  border-radius: 50%;
+  background-color: green;
+  color: white;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}

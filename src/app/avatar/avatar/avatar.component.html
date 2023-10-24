@@ -1,0 +1,21 @@
+<div class="avatar">
+  <p *ngIf="initials; else avatarIcon" class="avatar__initials">
+    {{ initials }}
+  </p>
+
+  <ng-template #avatarIcon
+    ><img src="assets/svg/avatar/avatar.icon.svg"
+  /></ng-template>
+
+  <div *ngIf="type === 'template'">
+    <ng-container [ngTemplateOutlet]="badge.templateRef"></ng-container>
+  </div>
+
+  <div *ngIf="type === 'select' || type === 'project'">
+    <ng-content select="[badge]"></ng-content>
+  </div>
+
+  <div *ngIf="type === 'fallback'">
+    <ng-content></ng-content>
+  </div>
+</div>
